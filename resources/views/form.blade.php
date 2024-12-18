@@ -179,8 +179,7 @@
             axios.get('/role_base')
                 .then(response => {
 
-                    console.log('Response:', response.data); // Debug log
-
+                  
                     if (response.data && Array.isArray(response.data)) {
                         response.data.forEach(role => {
                             $roleDropdown.append(`<option value="${role.id}">${role.name}</option>`);
